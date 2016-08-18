@@ -28,4 +28,16 @@ module.exports = class Translate {
 	get ref() {
 		return cellref(this._cellref);
 	}
+
+	get colNum() {
+		return parseInt(this._cellref.match(/C(\d+)/)[1]);
+	}
+
+	get col() {
+		return cellref(this._cellref).match(/[A-Z]+/)[0];
+	}
+
+	get row() {
+		return parseInt(this.ref.match(/\d+/)[0]);
+	}
 };
