@@ -1,6 +1,6 @@
 {
   "name": "cellref-translate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Initialise with an Excel-style cell reference and translate to get a new reference",
   "main": "index.js",
   "scripts": {
