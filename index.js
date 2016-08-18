@@ -22,7 +22,7 @@ module.exports = class Translate {
 		}
 
 		this._cellref = `R${r}C${c}`;
-		return this.ref;
+		return this;
 	}
 
 	get ref() {
