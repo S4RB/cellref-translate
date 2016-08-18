@@ -40,4 +40,12 @@ module.exports = class Translate {
 	get row() {
 		return parseInt(this.ref.match(/\d+/)[0]);
 	}
+
+	set col(value) {
+		return this._cellref = cellref(`${value}${this.row}`);
+	}
+
+	set row(value) {
+		return this._cellref = cellref(`${this.col}${parseInt(value)}`);
+	}
 };

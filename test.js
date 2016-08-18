@@ -21,6 +21,22 @@ describe('Translate', () => {
 		it('should return 5', () => new Translate('L5').row.should.equal(5))
 	);
 
+	describe('setting column', () =>
+		it('should set the correct column', () => {
+			const t = new Translate('A1');
+			t.col = 'B';
+			t.ref.should.equal('B1');
+		})
+	);
+
+	describe('setting row', () =>
+		it('should set the correct row', () => {
+			const t = new Translate('A1');
+			t.row = 2;
+			t.ref.should.equal('A2');
+		})
+	);
+
 	describe('horizontal translation', () =>
 		it('should reflect the horizontal translation', () => new Translate('A1').translate(1,0).ref.should.equal('B1'))
 	);
